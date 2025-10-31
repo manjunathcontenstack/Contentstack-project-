@@ -1,0 +1,101 @@
+{
+  "title": "Home Page",
+  "uid": "home_page",
+  "inbuilt_class": false,
+  "schema": [
+    {"display_name":"Title","uid":"title","data_type":"text","mandatory":true,"unique":true,"field_metadata":{"_default":true,"version":3}},
+    {"display_name":"URL","uid":"url","data_type":"text","mandatory":true,"unique":true},
+    {"data_type": "blocks","display_name": "Page Sections","uid": "page_sections","multiple": true,"schema": [],
+      "blocks": [
+        {"title": "Announcement Bar","uid": "announcement_bar","schema": [
+          {"display_name":"Enabled","uid":"enabled","data_type":"boolean","field_metadata":{"default_value":true}},
+          {"display_name":"Text","uid":"text","data_type":"text"},
+          {"data_type":"group","display_name":"Link","uid":"link","schema":[
+            {"display_name":"Label","uid":"label","data_type":"text"},
+            {"display_name":"URL","uid":"href","data_type":"text"}
+          ]}
+        ]},
+        {"title": "Hero","uid": "hero","schema": [
+          {"display_name":"Headline","uid":"headline","data_type":"text","mandatory":true},
+          {"display_name":"Subheadline","uid":"subheadline","data_type":"text","field_metadata":{"multiline":true}},
+          {"data_type":"group","display_name":"Primary CTA","uid":"primary_cta","schema":[
+            {"display_name":"Label","uid":"label","data_type":"text"},
+            {"display_name":"URL","uid":"href","data_type":"text"}
+          ]},
+          {"data_type":"file","display_name":"Background Image","uid":"background_image","field_metadata":{"image":true}}
+        ]},
+        {"title": "Logo Carousel","uid": "logo_carousel","schema": [
+          {"display_name":"Enable Marquee","uid":"enable_marquee","data_type":"boolean","field_metadata":{"default_value":true}},
+          {"data_type":"reference","display_name":"Brands","uid":"brands","reference_to":["partner"],"field_metadata":{"ref_multiple":true,"ref_multiple_content_types":true}}
+        ]},
+        {"title": "Roles","uid": "roles","schema": [
+          {"display_name":"Title","uid":"title","data_type":"text"},
+          {"data_type":"group","display_name":"Cards","uid":"cards","multiple":true,"schema":[
+            {"display_name":"Title","uid":"title","data_type":"text"},
+            {"display_name":"Description","uid":"description","data_type":"text","field_metadata":{"multiline":true}},
+            {"data_type":"file","display_name":"Image","uid":"image","field_metadata":{"image":true}},
+            {"data_type":"group","display_name":"Link","uid":"link","schema":[
+              {"display_name":"Label","uid":"label","data_type":"text"},
+              {"display_name":"URL","uid":"href","data_type":"text"}
+            ]}
+          ]}
+        ]},
+        {"title": "Success Cards","uid": "success_cards","schema": [
+          {"display_name":"Eyebrow","uid":"eyebrow","data_type":"text"},
+          {"display_name":"Title","uid":"title","data_type":"text"},
+          {"data_type":"group","display_name":"Cards","uid":"cards","multiple":true,"schema":[
+            {"display_name":"Value","uid":"value","data_type":"text"},
+            {"display_name":"Unit","uid":"unit","data_type":"text"},
+            {"display_name":"Label","uid":"label","data_type":"text"},
+            {"display_name":"Description","uid":"description","data_type":"text","field_metadata":{"multiline":true}},
+            {"data_type":"group","display_name":"Link","uid":"link","schema":[
+              {"display_name":"Label","uid":"label","data_type":"text"},
+              {"display_name":"URL","uid":"href","data_type":"text"}
+            ]}
+          ]}
+        ]},
+        {"title": "Metrics","uid": "metrics","schema": [
+          {"data_type":"group","display_name":"Metric","uid":"metric","multiple":true,"schema":[
+            {"display_name":"Value","uid":"value","data_type":"text"},
+            {"display_name":"Label","uid":"label","data_type":"text"},
+            {"display_name":"Suffix","uid":"suffix","data_type":"text"}
+          ]}
+        ]},
+        {"title": "Analyst Recognition","uid": "analyst_recognition","schema": [
+          {"display_name":"Title","uid":"title","data_type":"text"},
+          {"data_type":"group","display_name":"Badges","uid":"badges","multiple":true,"schema":[
+            {"data_type":"file","display_name":"Badge","uid":"badge","field_metadata":{"image":true}},
+            {"display_name":"Provider","uid":"provider","data_type":"text"},
+            {"display_name":"Label","uid":"label","data_type":"text"}
+          ]}
+        ]},
+        {"title": "Why","uid": "why","schema": [
+          {"display_name":"Title","uid":"title","data_type":"text"},
+          {"data_type":"group","display_name":"Cards","uid":"cards","multiple":true,"schema":[
+            {"display_name":"Title","uid":"title","data_type":"text"},
+            {"display_name":"Body","uid":"body","data_type":"text","field_metadata":{"multiline":true}}
+          ]}
+        ]},
+        {"title": "Quick Links","uid": "quick_links","schema": [
+          {"data_type":"group","display_name":"Links","uid":"links","multiple":true,"schema":[
+            {"display_name":"Label","uid":"label","data_type":"text"},
+            {"display_name":"URL","uid":"href","data_type":"text"}
+          ]}
+        ]},
+        {"title": "Bottom CTA","uid": "bottom_cta","schema": [
+          {"display_name":"Title","uid":"title","data_type":"text"},
+          {"display_name":"Subtitle","uid":"subtitle","data_type":"text","field_metadata":{"multiline":true}},
+          {"data_type":"group","display_name":"CTAs","uid":"ctas","multiple":true,"schema":[
+            {"display_name":"Label","uid":"label","data_type":"text"},
+            {"display_name":"URL","uid":"href","data_type":"text"}
+          ]}
+        ]}
+      ]
+    },
+    {"data_type":"global_field","display_name":"SEO","reference_to":"seo","uid":"seo"}
+  ],
+  "description": "Homepage singleton",
+  "options": {"is_page": true, "singleton": true, "title":"title", "sub_title":[], "url_pattern":"/", "url_prefix":"/"}
+}
+
+

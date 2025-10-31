@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plans – Contentstack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/logo%20(2).png" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <style>
+      .tabbar { display:flex; gap:26px; border-bottom:2px solid var(--border); margin-top:8px; }
+      .tabbar button { background:transparent; border:0; color:var(--text-1); padding:14px 0; font-weight:600; cursor:pointer; }
+      .tabbar button.active { color:#fff; border-bottom:3px solid var(--accent); margin-bottom:-2px; }
+      .billing { display:flex; align-items:center; gap:10px; margin-top:12px; }
+      .toggle { position:relative; width:56px; height:28px; background:#252535; border-radius:999px; cursor:pointer; }
+      .toggle i { position:absolute; top:3px; left:3px; width:22px; height:22px; background:#fff; border-radius:50%; transition:left .2s ease; }
+      .toggle.active i { left:31px; }
+      .plan-grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:18px; margin-top:20px; }
+      .plan { background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0)); border:1px solid var(--border); border-radius:12px; padding:18px; }
+      .plan h3 { margin:6px 0 6px; }
+      .price { font-size:32px; font-weight:800; }
+      .per { font-size:12px; color:var(--muted); margin-left:6px; }
+      .feat { display:grid; gap:8px; margin-top:10px; color:var(--text-1); }
+      .feat li { list-style: none; padding-left: 18px; position: relative; }
+      .feat li::before { content:'✓'; position:absolute; left:0; color:var(--accent-2); }
+      .cta-row { display:flex; gap:10px; margin-top:14px; }
+      .compare { margin-top: 28px; border-top:1px solid var(--border); padding-top: 18px; }
+      .compare table { width:100%; border-collapse: collapse; }
+      .compare th, .compare td { padding: 10px; border-bottom:1px solid var(--border); text-align: left; }
+      .check { color: var(--accent-2); font-weight: 800; }
+      @media (max-width: 960px){ .plan-grid{ grid-template-columns:1fr; } }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="logo" href="/"><img src="/assets/logo%20(2).png" alt="Contentstack" class="logo-img" /> Contentstack</a>
+        <a class="btn ghost" href="/">Back</a>
+      </div>
+    </header>
+
+    <section class="hero" style="padding:56px 0 20px">
+      <div class="container">
+        <h1>We have the right solution for you</h1>
+
+        <div class="tabbar" data-tabs>
+          <button role="tab" aria-controls="tab-cms">Headless CMS</button>
+          <button role="tab" aria-controls="tab-cdp">Real‑time CDP</button>
+          <button role="tab" aria-controls="tab-dxp">Adaptive DXP</button>
+        </div>
+        <div class="billing">
+          <span>Monthly</span>
+          <button id="billing-toggle" class="toggle" type="button" aria-pressed="false" aria-label="Toggle billing"><i></i></button>
+          <span>Yearly <small class="muted">(save 15%)</small></span>
+        </div>
+      </div>
+    </section>
+
+    <main class="container" style="padding: 24px 0 60px">
+      <section id="tab-cms" role="tabpanel">
+        <div class="plan-grid">
+          <article class="plan">
+            <h3>Starter</h3>
+            <p class="muted">For small teams exploring headless.</p>
+            <div class="price"><span data-price data-month="0" data-year="0">$0</span><span class="per">/month</span></div>
+            <ul class="feat">
+              <li>Visual editing & timeline preview</li>
+              <li>Granular roles & permissions</li>
+              <li>App hosting included</li>
+            </ul>
+            <div class="cta-row">
+              <a class="btn solid" href="/contact">Talk to us</a>
+              <a class="btn ghost" href="#">Start free</a>
+            </div>
+          </article>
+          <article class="plan">
+            <h3>Growth</h3>
+            <p class="muted">Advanced workflows and scale.</p>
+            <div class="price"><span data-price data-month="799" data-year="679">$799</span><span class="per">/month</span></div>
+            <ul class="feat">
+              <li>Brand‑aware AI assistant</li>
+              <li>Personalization engine</li>
+              <li>No‑code automations</li>
+            </ul>
+            <div class="cta-row">
+              <a class="btn solid" href="/contact">Talk to us</a>
+              <a class="btn ghost" href="#">Request demo</a>
+            </div>
+          </article>
+          <article class="plan">
+            <h3>Enterprise</h3>
+            <p class="muted">Mission‑critical security and support.</p>
+            <div class="price"><span data-price data-month="1999" data-year="1699">$1,999</span><span class="per">/month</span></div>
+            <ul class="feat">
+              <li>SAML/SSO & advanced governance</li>
+              <li>Edge functions & front‑end hosting</li>
+              <li>24×7 premium support</li>
+            </ul>
+            <div class="cta-row">
+              <a class="btn solid" href="/contact">Talk to us</a>
+              <a class="btn ghost" href="#">Request demo</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="tab-cdp" role="tabpanel" hidden>
+        <div class="plan-grid">
+          <article class="plan">
+            <h3>CDP Starter</h3>
+            <p class="muted">Unify profiles in real‑time.</p>
+            <ul class="feat">
+              <li>Event collection SDKs</li>
+              <li>Audience segmentation</li>
+              <li>Activation to destinations</li>
+            </ul>
+            <div class="cta-row">
+              <a class="btn solid" href="/contact">Talk to us</a>
+              <a class="btn ghost" href="#">Request demo</a>
+            </div>
+          </article>
+          <article class="plan">
+            <h3>CDP Enterprise</h3>
+            <p class="muted">Attribution and advanced analytics.</p>
+            <ul class="feat">
+              <li>Identity resolution</li>
+              <li>ML‑powered insights</li>
+              <li>Data governance toolkit</li>
+            </ul>
+            <div class="cta-row">
+              <a class="btn solid" href="/contact">Talk to us</a>
+              <a class="btn ghost" href="#">Request demo</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="tab-dxp" role="tabpanel" hidden>
+        <div class="plan-grid">
+          <article class="plan">
+            <h3>Adaptive DXP</h3>
+            <p class="muted">Personalize across channels.</p>
+            <div class="price"><span data-price data-month="1399" data-year="1189">$1,399</span><span class="per">/month</span></div>
+            <ul class="feat">
+              <li>Journey orchestration</li>
+              <li>A/B/n experimentation</li>
+              <li>Edge‑powered delivery</li>
+            </ul>
+            <div class="cta-row">
+              <a class="btn solid" href="/contact">Talk to us</a>
+              <a class="btn ghost" href="#">Request demo</a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="compare">
+        <h3>Compare features</h3>
+        <table>
+          <thead>
+            <tr><th>Feature</th><th>Starter</th><th>Growth</th><th>Enterprise</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Visual editing</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+            <tr><td>Personalization engine</td><td></td><td class="check">✓</td><td class="check">✓</td></tr>
+            <tr><td>Advanced governance</td><td></td><td></td><td class="check">✓</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="company">
+      <div class="container footer-grid">
+        
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="#">Solution Center</a></li>
+            <li><a href="/marketplace">Marketplace</a></li>
+            <li><a href="#">Changelog</a></li>
+            <li><a href="#">Developers &amp; IT</a></li>
+            <li><a href="#">Business users</a></li>
+            <li><a href="/plans">Plans &amp; Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="#">Retail</a></li>
+            <li><a href="#">Travel and tourism</a></li>
+            <li><a href="#">Financial services</a></li>
+            <li><a href="#">E‑commerce</a></li>
+            <li><a href="#">Localization</a></li>
+            <li><a href="#">Personalization</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Academy</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="#">Product updates</a></li>
+            <li><a href="#">Webinars</a></li>
+            <li><a href="#">Glossary</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customers</h4>
+          <ul>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Customer Care</a></li>
+            <li><a href="#">Experience Awards</a></li>
+            <li><a href="#">Customer support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/company">About us</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="#">Customer support portal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Partners</h4>
+          <ul>
+            <li><a href="/partners">Overview</a></li>
+            <li><a href="/partners#solutions">Find a partner</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Github</a></li>
+            <li><a href="#">Youtube</a></li>
+            <li><a href="#">Discord</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footnote">
+        <p>© <span id="year"></span> Contentstack. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/assets/script.js"></script>
+    <script src="/assets/contentstack-sync.js"></script>
+  </body>
+  </html>
+
+

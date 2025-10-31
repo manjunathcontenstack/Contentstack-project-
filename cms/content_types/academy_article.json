@@ -1,0 +1,20 @@
+{
+  "title": "Academy Article",
+  "uid": "academy_article",
+  "inbuilt_class": false,
+  "schema": [
+    {"display_name":"Title","uid":"title","data_type":"text","mandatory":true,"unique":true,"field_metadata":{"_default":true,"version":3}},
+    {"display_name":"URL","uid":"url","data_type":"text","mandatory":true,"unique":true},
+    {"display_name":"External URL","uid":"external_url","data_type":"text"},
+    {"display_name":"Level","uid":"level","data_type":"text"},
+    {"display_name":"Duration","uid":"duration","data_type":"text"},
+    {"display_name":"Category","uid":"category","data_type":"text"},
+    {"display_name":"Featured image","uid":"featured_image","data_type":"file","field_metadata":{"image":true}},
+    {"display_name":"Body","uid":"body","data_type":"text","field_metadata":{"multiline":true}},
+    {"display_name":"Labels","uid":"labels","data_type":"text","multiple":true}
+  ],
+  "description": "Learning content for the academy",
+  "options": {"is_page": false, "singleton": false, "title":"title", "sub_title":[]}
+}
+
+

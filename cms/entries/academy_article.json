@@ -1,0 +1,14 @@
+{
+  "content_type": "academy_article",
+  "entries": [
+    {"title": "Personalize Foundations", "url": "personalize-foundations", "external_url": "https://www.contentstack.com/academy/courses/personalize-foundations", "level": "Beginner", "duration": "19m", "category": "Personalization", "body": "", "labels": ["academy","personalize"]},
+    {"title": "Content modeling basics", "url": "content-modeling-basics", "level": "Beginner", "duration": "15 min", "category": "Onboarding", "body": "", "labels": ["academy"]},
+    {"title": "JSON RTE deep dive", "url": "json-rte-deep-dive", "level": "Intermediate", "duration": "20 min", "category": "Authoring", "body": "", "labels": ["academy"]},
+    {"title": "Workflows and governance", "url": "workflows-and-governance", "level": "Intermediate", "duration": "25 min", "category": "Operations", "body": "", "labels": ["academy"]},
+    {"title": "Localization and variants", "url": "localization-and-variants", "level": "Intermediate", "duration": "25 min", "category": "Global", "body": "", "labels": ["academy"]},
+    {"title": "Advanced personalization", "url": "advanced-personalization", "level": "Advanced", "duration": "30 min", "category": "Personalization", "body": "", "labels": ["academy"]},
+    {"title": "Webhooks and automation", "url": "webhooks-and-automation", "level": "Intermediate", "duration": "20 min", "category": "Automation", "body": "", "labels": ["academy"]}
+  ]
+}
+
+

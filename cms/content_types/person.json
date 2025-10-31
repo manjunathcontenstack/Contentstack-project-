@@ -1,0 +1,15 @@
+{
+  "title": "Person",
+  "uid": "person",
+  "inbuilt_class": false,
+  "schema": [
+    {"display_name":"Name","uid":"title","data_type":"text","mandatory":true,"unique":true,"field_metadata":{"_default":true,"version":3}},
+    {"display_name":"Job Title","uid":"job_title","data_type":"text"},
+    {"display_name":"Company","uid":"company","data_type":"text"},
+    {"data_type":"file","display_name":"Headshot","uid":"headshot","field_metadata":{"image":true}}
+  ],
+  "description": "People such as speakers/leaders",
+  "options": {"is_page": false, "singleton": false, "title":"title", "sub_title":[]}
+}
+
+

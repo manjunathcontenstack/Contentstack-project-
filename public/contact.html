@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact – Contentstack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/logo%20(2).png" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <style>
+      .grid { display:grid; grid-template-columns: 2fr 1fr; gap:24px; }
+      .form { display: grid; gap: 14px; max-width: 720px; }
+      .field { display: grid; gap: 6px; }
+      .field label { color: var(--text-1); font-size: 14px; }
+      .input, select.input { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 12px; color: var(--text-0); }
+      .input:focus, select.input:focus { outline: 2px solid var(--accent); border-color: transparent; }
+      textarea.input { min-height: 120px; resize: vertical; }
+      .field.error .input { border-color: #ff6b6b; }
+      .hint { color:#ff9b9b; font-size:12px; }
+      .aside { background:#14141f; border:1px solid var(--border); border-radius:12px; padding:18px; height: fit-content; }
+      .success-banner { display:none; }
+      .success-banner[hidden=false], .success-banner.show { display:block; background: #0f1420; border:1px solid var(--border); border-radius:12px; padding:18px; margin-top:16px; }
+      @media (max-width: 980px){ .grid{ grid-template-columns:1fr } }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="logo" href="/"><img src="/assets/logo%20(2).png" alt="Contentstack" class="logo-img" /> Contentstack</a>
+        <a class="btn ghost" href="/">Back</a>
+      </div>
+    </header>
+
+    <section class="hero" style="padding:56px 0 30px">
+      <div class="container">
+        <h1>Talk to us</h1>
+      </div>
+    </section>
+
+    <main class="container" style="padding: 28px 0 60px">
+      <div class="grid">
+        <form class="role-card form" data-validate data-success="#contact-success">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" class="input" placeholder="Jane Doe" required />
+            <span class="hint"></span>
+          </div>
+          <div class="field">
+            <label for="email">Work email</label>
+            <input id="email" type="email" class="input" placeholder="jane@example.com" required />
+            <span class="hint"></span>
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input id="company" class="input" placeholder="Acme Inc" required />
+            <span class="hint"></span>
+          </div>
+          <div class="field">
+            <label for="role">Role</label>
+            <select id="role" class="input" required>
+              <option value="">Select</option>
+              <option>Developer / IT</option>
+              <option>Marketing</option>
+              <option>Product</option>
+              <option>Leadership</option>
+            </select>
+            <span class="hint"></span>
+          </div>
+          <div class="field">
+            <label for="topic">Topic</label>
+            <select id="topic" class="input" required>
+              <option value="">Select a topic</option>
+              <option>Product demo</option>
+              <option>Pricing & plans</option>
+              <option>Technical support</option>
+              <option>Partnerships</option>
+            </select>
+            <span class="hint"></span>
+          </div>
+          <div class="field">
+            <label for="message">How can we help?</label>
+            <textarea id="message" class="input" placeholder="Tell us about your project..." required></textarea>
+            <span class="hint"></span>
+          </div>
+          <label style="display:flex; align-items:center; gap:8px; font-size:14px; color:var(--text-1)"><input type="checkbox" required /> I agree to be contacted about my request.</label>
+          <div style="display:flex; gap:10px">
+            <button class="btn solid" type="submit">Send message</button>
+            <a class="btn ghost" href="/start">Start free</a>
+          </div>
+          <div id="contact-success" class="success-banner" hidden>
+            <strong>Thanks!</strong> We received your request and will reach out shortly.
+          </div>
+        </form>
+        <aside class="aside">
+          <h3>Contact options</h3>
+          <p class="muted">Prefer email? <a class="link" href="mailto:sales@example.com">sales@example.com</a></p>
+          <p class="muted">Need support? Visit <a class="link" href="/docs">Docs</a> or <a class="link" href="/updates">Updates</a>.</p>
+          <p class="muted">Looking for partners? See <a class="link" href="/partners">Partners</a>.</p>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer" id="company">
+      <div class="container footer-grid">
+        
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="#">Solution Center</a></li>
+            <li><a href="/marketplace">Marketplace</a></li>
+            <li><a href="#">Changelog</a></li>
+            <li><a href="#">Developers &amp; IT</a></li>
+            <li><a href="#">Business users</a></li>
+            <li><a href="/plans">Plans &amp; Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="#">Retail</a></li>
+            <li><a href="#">Travel and tourism</a></li>
+            <li><a href="#">Financial services</a></li>
+            <li><a href="#">E‑commerce</a></li>
+            <li><a href="#">Localization</a></li>
+            <li><a href="#">Personalization</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Academy</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="#">Product updates</a></li>
+            <li><a href="#">Webinars</a></li>
+            <li><a href="#">Glossary</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customers</h4>
+          <ul>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Customer Care</a></li>
+            <li><a href="#">Experience Awards</a></li>
+            <li><a href="#">Customer support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/company">About us</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="#">Customer support portal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Partners</h4>
+          <ul>
+            <li><a href="/partners">Overview</a></li>
+            <li><a href="/partners#solutions">Find a partner</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Github</a></li>
+            <li><a href="#">Youtube</a></li>
+            <li><a href="#">Discord</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footnote">
+        <p>© <span id="year"></span> Contentstack. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="/assets/script.js"></script>
+    <script src="/assets/forms.js"></script>
+  </body>
+  </html>
+
+

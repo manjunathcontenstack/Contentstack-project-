@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Partners – Contentstack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/logo%20(2).png" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <style>
+      .partners-hero { padding:56px 0 30px }
+      .tablist { display:flex; gap:24px; justify-content:center; border-bottom:1px solid var(--border); }
+      .tablist button { background:transparent; border:0; color:var(--text-1); padding:14px 0; font-weight:600; cursor:pointer; }
+      .tablist button.active { color:#fff; border-bottom:3px solid var(--accent); margin-bottom:-1px; }
+      .cards { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:22px; padding: 24px 0 60px }
+      .p-card { background:#14141f; border:1px solid var(--border); border-radius:12px; padding:22px; }
+      .p-card h3 { margin: 0 0 8px; }
+      .p-card p { color: var(--text-1); }
+      .p-card img { width:56px; height:56px; border-radius:10px; border:1px solid var(--border); background:#0f0f18; margin-bottom:8px }
+      .cta { display:flex; gap:10px; align-items:center; margin-top:10px }
+      @media (max-width: 1100px){ .cards{ grid-template-columns:1fr 1fr } }
+      @media (max-width: 760px){ .cards{ grid-template-columns:1fr } }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="logo" href="/"><img src="/assets/logo%20(2).png" alt="Contentstack" class="logo-img" /> Contentstack</a>
+        <a class="btn ghost" href="/">Back</a>
+      </div>
+    </header>
+
+    <section class="hero partners-hero">
+      <div class="container">
+        <h1>Our partner ecosystem</h1>
+        <p class="muted">Find the right solutions or technology partner to make your next digital project a success.</p>
+        <div class="cta">
+          <a class="btn solid" href="#">Partner login</a>
+          <a class="btn ghost" href="/contact">Become a partner</a>
+        </div>
+        <div class="tablist" style="border-bottom:0; margin-top:12px">
+          <input id="partnerSearch" class="search" placeholder="Search partners" oninput="filterPartners(this.value)">
+          <span class="chip active" onclick="setPartnerFilter('all', this)">All</span>
+          <span class="chip" onclick="setPartnerFilter('solutions', this)">Solutions</span>
+          <span class="chip" onclick="setPartnerFilter('technology', this)">Technology</span>
+        </div>
+        <div class="tablist" data-tabs>
+          <button role="tab" aria-controls="solutions">Solutions Partners</button>
+          <button role="tab" aria-controls="technology">Technology Partners</button>
+        </div>
+      </div>
+    </section>
+
+    <main class="container">
+      <section id="solutions" role="tabpanel">
+        <div class="cards" id="partnersGrid">
+          <article class="p-card" data-cat="solutions" data-text="silvertech digital experience agency">
+            <img alt="SilverTech" src="https://images.unsplash.com/photo-1603308824942-0a2f238f2d8f?w=128&q=80&auto=format&fit=crop" />
+            <h3>SilverTech</h3>
+            <p>Digital experience agency redefining how businesses engage with their customers.</p>
+            <a class="link" href="#">Learn more</a>
+          </article>
+          <article class="p-card" data-cat="solutions" data-text="xcentium consultancy enterprise modernization">
+            <img alt="XCentium" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=128&q=80&auto=format&fit=crop" />
+            <h3>XCentium</h3>
+            <p>Delivery‑focused consultancy helping enterprises modernize content platforms.</p>
+            <a class="link" href="#">Learn more</a>
+          </article>
+          <article class="p-card" data-cat="solutions" data-text="smartling localization translation">
+            <img alt="Smartling" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=128&q=80&auto=format&fit=crop" />
+            <h3>Smartling</h3>
+            <p>Localization solutions to bring your content to global audiences.</p>
+            <a class="link" href="#">Learn more</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="technology" role="tabpanel" hidden>
+        <div class="cards" id="partnersTech">
+          <article class="p-card" data-cat="technology" data-text="cloudinary image video transform">
+            <img alt="Cloudinary" src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=128&q=80&auto=format&fit=crop" />
+            <h3>Cloudinary</h3>
+            <p>Image and video technology to deliver transformative visual experiences.</p>
+            <a class="link" href="#">Learn more</a>
+          </article>
+          <article class="p-card" data-cat="technology" data-text="algolia search discovery">
+            <img alt="Algolia" src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=128&q=80&auto=format&fit=crop" />
+            <h3>Algolia</h3>
+            <p>End‑to‑end AI search and discovery platform for rich, relevant results.</p>
+            <a class="link" href="#">Learn more</a>
+          </article>
+          <article class="p-card" data-cat="technology" data-text="vercel frontend cloud edge">
+            <img alt="Vercel" src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=128&q=80&auto=format&fit=crop" />
+            <h3>Vercel</h3>
+            <p>Fast, reliable front‑end cloud for shipping on the edge.</p>
+            <a class="link" href="#">Learn more</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footnote">
+        <p>© <span id="year"></span> EdgeStack.</p>
+      </div>
+    </footer>
+    <script>
+      let partnerFilter = 'all';
+      function setPartnerFilter(cat, el){
+        partnerFilter = cat; document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active')); el.classList.add('active'); filterPartners(document.getElementById('partnerSearch')?.value||'');
+      }
+      function filterPartners(q=''){
+        const normalized = q.toLowerCase();
+        document.querySelectorAll('#partnersGrid .p-card, #partnersTech .p-card').forEach(card=>{
+          const cat = card.getAttribute('data-cat');
+          const txt = card.getAttribute('data-text')||'';
+          const matchCat = partnerFilter==='all' || partnerFilter===cat;
+          const matchText = !normalized || txt.includes(normalized);
+          card.style.display = (matchCat && matchText) ? '' : 'none';
+        });
+      }
+    </script>
+    <script src="/assets/script.js"></script>
+    <script src="/assets/contentstack-sync.js"></script>
+  </body>
+  </html>
+
+

@@ -1,0 +1,12 @@
+{
+  "content_type": "blog_post",
+  "entries": [
+    {"title": "Announcing our new platform", "url": "announcing-our-new-platform", "date": "2025-10-30T00:00:00.000Z", "body": "", "is_archived": false},
+    {"title": "How to ship faster with composable architecture", "url": "ship-faster-with-composable", "date": "2025-10-29T00:00:00.000Z", "body": "", "is_archived": false},
+    {"title": "Personalization at scale: a practical guide", "url": "personalization-at-scale", "date": "2025-10-28T00:00:00.000Z", "body": "", "is_archived": false},
+    {"title": "Why headless CMS beats legacy suites", "url": "headless-vs-legacy", "date": "2025-10-27T00:00:00.000Z", "body": "", "is_archived": false},
+    {"title": "Designing content models for growth", "url": "content-models-for-growth", "date": "2025-10-26T00:00:00.000Z", "body": "", "is_archived": false}
+  ]
+}
+
+

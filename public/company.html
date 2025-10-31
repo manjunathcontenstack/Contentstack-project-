@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Company – Contentstack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <style>
+      .tabbar { display:flex; gap:24px; border-bottom:1px solid var(--border); margin-top:8px; }
+      .tabbar button { background:transparent; border:0; color:var(--text-1); padding:14px 0; font-weight:600; cursor:pointer; }
+      .tabbar button.active { color:#fff; border-bottom:3px solid var(--accent); margin-bottom:-1px; }
+
+      .leaders { display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:18px; }
+      .leader { background:#14141f; border:1px solid var(--border); border-radius:12px; padding:18px; }
+      .leader img { width:100%; height:240px; object-fit:cover; border-radius:10px; border:1px solid var(--border); margin-bottom:10px; }
+      .leader h3 { margin:6px 0 2px; }
+      .leader p { color:var(--muted); margin:0; }
+
+      .awards { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:18px; }
+      .award { height:160px; border-radius:12px; border:1px solid var(--border); display:grid; place-items:end start; padding:18px; font-weight:800; color:#fff; }
+      .award.a1 { background:linear-gradient(180deg,#5da99b,#2b3f3c); }
+      .award.a2 { background:linear-gradient(180deg,#5a69a7,#2a2f56); }
+      .award.a3 { background:linear-gradient(180deg,#8e6aff,#4c3492); }
+
+      /* About/overview styles */
+      .about-grid { display:grid; grid-template-columns: 1.2fr 1fr; gap:22px; align-items:center }
+      .about-gallery { display:grid; grid-template-columns: 1fr; gap:14px; align-items:stretch }
+      .about-gallery img { width:100%; height:auto; max-height:280px; object-fit:cover; border-radius:10px; border:1px solid var(--border) }
+      .about-copy { color: var(--text-1); margin: 12px 0 18px; line-height: 1.7; }
+      .about-grid h2 { margin: 0 0 14px; }
+      .about-points { list-style:none; padding:0; margin:10px 0; display:grid; gap:12px }
+      .about-points li { padding-left:18px; position:relative; margin: 0 0 4px; }
+      .about-grid .cta-row { margin: 14px 0 28px; }
+      @media (max-width: 980px){
+        .about-grid { grid-template-columns: 1fr; }
+        .about-gallery { margin-top: 16px; }
+      }
+      .about-points li::before { content:'✓'; position:absolute; left:0; color:var(--accent-2); font-weight:900 }
+
+      .stats-grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:18px; margin-top:16px; }
+      .stat { background:#14141f; border:1px solid var(--border); border-radius:12px; padding:18px; }
+      .stat h3 { margin:0; font-size:38px; letter-spacing:-.02em }
+      .stat p { margin:6px 0 0; color:var(--muted) }
+
+      .mission-grid { display:grid; grid-template-columns: 1.2fr 1fr; gap:22px; align-items:start; }
+      .mission-points { list-style: none; padding:0; margin:0; display:grid; gap:10px; }
+      .mission-points li { padding-left:18px; position:relative; color:var(--text-1) }
+      .mission-points li::before { content:'✓'; position:absolute; left:0; color:var(--accent-2) }
+
+      .jobs-grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:18px; margin-top:12px }
+      .job-card { background:#14141f; border:1px solid var(--border); border-radius:12px; padding:18px }
+      .badge { display:inline-block; border:1px solid var(--border); padding:4px 8px; border-radius:999px; font-size:12px; color:var(--muted); margin-left:8px }
+      .job-card .meta { color:var(--muted); font-size:13px }
+
+      /* New design sections */
+      .band { margin: 34px 0; padding: 18px; border-radius: 12px; background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0)); border:1px solid var(--border); }
+      .offices-grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:14px; }
+      .offices-grid img { width:100%; height:220px; object-fit:cover; border-radius:12px; border:1px solid var(--border); }
+
+      .testimonials { padding: 10px 0; }
+      .testimonials-grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:18px; }
+      .testimonial-card { background:#14141f; border:1px solid var(--border); border-radius:12px; padding:18px; display:grid; gap:10px; }
+      .testimonial-card .quote { font-size:16px; line-height:1.6; }
+      .testimonial-card .author { color:var(--muted); font-size:13px; }
+
+      @media (max-width: 1100px){ .leaders{ grid-template-columns: repeat(3,1fr) } .awards{ grid-template-columns:1fr 1fr } }
+      @media (max-width: 760px){ .leaders{ grid-template-columns: repeat(2,1fr) } .awards{ grid-template-columns:1fr } .stats-grid{ grid-template-columns:1fr } .mission-grid{ grid-template-columns:1fr } .jobs-grid{ grid-template-columns:1fr } }
+      @media (max-width: 520px){ .leaders{ grid-template-columns:1fr } }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="logo" href="/"><img src="/assets/logo%20(2).png" alt="Contentstack" class="logo-img" /> Contentstack</a>
+        <a class="btn ghost" href="/careers">Careers</a>
+      </div>
+    </header>
+
+    <section class="hero" style="padding:56px 0 24px">
+      <div class="container">
+        <h1>Company</h1>
+        <div class="tabbar" data-tabs>
+          <button role="tab" aria-controls="panel-overview">About us</button>
+          <button role="tab" aria-controls="panel-mission">Our Mission</button>
+          <button role="tab" aria-controls="panel-leadership">Leadership</button>
+          <button role="tab" aria-controls="panel-awards">Awards</button>
+          <button role="tab" aria-controls="panel-values">Values</button>
+          <button role="tab" aria-controls="panel-careers">Careers</button>
+          <button role="tab" aria-controls="panel-contact">Contact</button>
+        </div>
+      </div>
+    </section>
+
+    <main class="container" style="padding:28px 0 60px">
+      <section id="panel-overview" role="tabpanel">
+        <div class="about-grid">
+          <div>
+            <h2>Why you should work with us</h2>
+            <p class="about-copy">We’re a global team building an adaptive experience platform so brands can personalize in real time, at scale. Our culture is grounded in collaboration and curiosity—we solve hard problems together and celebrate the wins.</p>
+            <ul class="about-points">
+              <li>One team, one dream: we win as one and lift each other up.</li>
+              <li>Customer‑first mindset with a passion for craftsmanship.</li>
+              <li>Remote‑friendly with hubs in Austin and Mumbai.</li>
+              <li>Growth opportunities, learning stipend and inclusive culture.</li>
+            </ul>
+            <div class="cta-row">
+              <a class="btn solid" href="/careers">See open roles</a>
+              <a class="btn ghost" href="/contact">Talk to us</a>
+            </div>
+          </div>
+          <div class="about-gallery">
+            <img alt="" src="" style="display: none;" />
+          </div>
+        </div>
+      </section>
+      <section id="panel-mission" role="tabpanel" hidden>
+        <div class="mission-grid">
+          <div>
+            <h3>What we believe</h3>
+            <ul class="mission-points">
+              <li>Content and presentation should be decoupled to move fast.</li>
+              <li>Teams deserve visual tools backed by robust APIs.</li>
+              <li>Personalization must be real‑time, secure and measurable.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Milestones</h3>
+            <ul class="timeline">
+              <li>2018 – Platform launched with headless CMS</li>
+              <li>2021 – Edge hosting and functions GA</li>
+              <li>2024 – Real‑time data and personalization suite</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="panel-leadership" role="tabpanel">
+        <h2>Our team</h2>
+        <div class="leaders reveal">
+          <!-- Leadership content will be dynamically loaded from Contentstack -->
+        </div>
+      </section>
+      <section id="panel-awards" role="tabpanel" hidden>
+        <div class="awards">
+          <div class="award a1">Forrester Wave</div>
+          <div class="award a2">Constellation ShortList</div>
+          <div class="award a3">IDC MarketScape</div>
+        </div>
+      </section>
+      <section id="panel-values" role="tabpanel" hidden>
+        <div class="feature-grid">
+          <article class="feature-card"><h3>Customer First</h3><p>We obsess over outcomes that delight our customers.</p></article>
+          <article class="feature-card"><h3>Build with Care</h3><p>Quality, security and performance are non‑negotiable.</p></article>
+          <article class="feature-card"><h3>Win as One</h3><p>We collaborate across teams and celebrate wins together.</p></article>
+        </div>
+      </section>
+      <section id="panel-careers" role="tabpanel" hidden>
+        <p class="muted">We’re hiring across Product, Engineering and Customer Success.</p>
+        <div class="jobs-grid">
+          <article class="job-card">
+            <h3>Senior Frontend Engineer <span class="badge">Remote</span></h3>
+            <p class="meta">React, TypeScript, Edge</p>
+            <a class="link" href="/careers">Apply now</a>
+          </article>
+          <article class="job-card">
+            <h3>Product Designer <span class="badge">Remote</span></h3>
+            <p class="meta">Design systems, UX, Research</p>
+            <a class="link" href="/careers">Apply now</a>
+          </article>
+          <article class="job-card">
+            <h3>Solutions Architect <span class="badge">Hybrid</span></h3>
+            <p class="meta">Pre‑sales, Integrations, Composable</p>
+            <a class="link" href="/careers">Apply now</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="panel-contact" role="tabpanel" hidden>
+        <p class="muted">Have questions or press inquiries? Reach out and our team will be in touch.</p>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Sales</h3>
+            <p class="muted">Explore solutions, plans and pricing.</p>
+            <a class="btn ghost" href="/contact">Talk to us</a>
+          </article>
+          <article class="feature-card">
+            <h3>Support</h3>
+            <p class="muted">Get help, docs and product guidance.</p>
+            <a class="btn ghost" href="/docs">Visit docs</a>
+          </article>
+          <article class="feature-card">
+            <h3>Careers</h3>
+            <p class="muted">Join us to reinvent digital experiences.</p>
+            <a class="btn ghost" href="/careers">View openings</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Offices band -->
+      <section class="band">
+        <h2>Where we work</h2>
+        <p class="muted">Remote-first with hubs for collaboration and community.</p>
+        <div class="offices-grid">
+          <img alt="" src="" style="display: none;" />
+          <img alt="" src="" style="display: none;" />
+          <img alt="" src="" style="display: none;" />
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials">
+        <h2>What our teammates say</h2>
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <p class="quote">“The culture is empowering — we’re trusted to solve real problems and supported at every step.”</p>
+            <p class="author">Jordan • Product Manager</p>
+          </article>
+          <article class="testimonial-card">
+            <p class="quote">“Remote-first gives me flexibility while still feeling connected thanks to our hubs and rituals.”</p>
+            <p class="author">Riley • Staff Engineer</p>
+          </article>
+          <article class="testimonial-card">
+            <p class="quote">“We genuinely win as one. Cross‑team collaboration makes shipping great work fun.”</p>
+            <p class="author">Samira • Design Lead</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="band">
+        <h2>Ready to join us?</h2>
+        <div class="cta-row">
+          <a class="btn solid" href="/careers">See open roles</a>
+          <a class="btn ghost" href="/contact">Talk to us</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="company">
+      <div class="container footer-grid">
+        
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="#">Solution Center</a></li>
+            <li><a href="/marketplace">Marketplace</a></li>
+            <li><a href="#">Changelog</a></li>
+            <li><a href="#">Developers &amp; IT</a></li>
+            <li><a href="#">Business users</a></li>
+            <li><a href="/plans">Plans &amp; Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="#">Retail</a></li>
+            <li><a href="#">Travel and tourism</a></li>
+            <li><a href="#">Financial services</a></li>
+            <li><a href="#">E‑commerce</a></li>
+            <li><a href="#">Localization</a></li>
+            <li><a href="#">Personalization</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Academy</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="#">Product updates</a></li>
+            <li><a href="#">Webinars</a></li>
+            <li><a href="#">Glossary</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customers</h4>
+          <ul>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Customer Care</a></li>
+            <li><a href="#">Experience Awards</a></li>
+            <li><a href="#">Customer support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/company">About us</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="#">Customer support portal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Partners</h4>
+          <ul>
+            <li><a href="/partners">Overview</a></li>
+            <li><a href="/partners#solutions">Find a partner</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Github</a></li>
+            <li><a href="#">Youtube</a></li>
+            <li><a href="#">Discord</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footnote">
+        <p>© <span id="year"></span> Contentstack. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="/assets/script.js"></script>
+    <script src="/assets/contentstack-sync.js?v=2"></script>
+  </body>
+  </html>
+
+
