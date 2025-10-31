@@ -1,0 +1,24 @@
+{
+  "title": "Plan",
+  "uid": "plan",
+  "inbuilt_class": false,
+  "schema": [
+    {"display_name":"Name","uid":"title","data_type":"text","mandatory":true,"unique":true,"field_metadata":{"_default":true,"version":3}},
+    {"display_name":"Slug","uid":"slug","data_type":"text","mandatory":true,"unique":true},
+    {"display_name":"Badge","uid":"badge","data_type":"text"},
+    {"display_name":"Most Popular","uid":"most_popular","data_type":"boolean","field_metadata":{"default_value":false}},
+    {"display_name":"Price Monthly","uid":"price_monthly","data_type":"text"},
+    {"display_name":"Price Yearly","uid":"price_yearly","data_type":"text"},
+    {"display_name":"Billing Note","uid":"billing_note","data_type":"text"},
+    {"data_type":"group","display_name":"Features","uid":"features","multiple":true,"schema":[
+      {"display_name":"Name","uid":"name","data_type":"text"},
+      {"display_name":"Included","uid":"included","data_type":"boolean","field_metadata":{"default_value":true}}
+    ]},
+    {"display_name":"CTA Label","uid":"cta_label","data_type":"text"},
+    {"display_name":"CTA URL","uid":"cta_url","data_type":"text"}
+  ],
+  "description": "Pricing plans",
+  "options": {"is_page": false, "singleton": false, "title":"title", "sub_title":[]}
+}
+
+

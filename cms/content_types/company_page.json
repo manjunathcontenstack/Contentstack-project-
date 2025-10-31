@@ -1,0 +1,83 @@
+{
+  "title": "Company Page",
+  "uid": "company_page",
+  "inbuilt_class": false,
+  "schema": [
+    {"display_name":"Title","uid":"title","data_type":"text","mandatory":true,"unique":true,"field_metadata":{"_default":true,"version":3}},
+    {"display_name":"URL","uid":"url","data_type":"text","mandatory":true,"unique":true},
+    {"data_type":"blocks","display_name":"Page Sections","uid":"page_sections","multiple":true,
+     "blocks": [
+       {"title":"Overview","uid":"overview","schema":[
+         {"display_name":"Headline","uid":"headline","data_type":"text"},
+         {"display_name":"Copy","uid":"copy","data_type":"text","field_metadata":{"multiline":true}},
+         {"data_type":"group","display_name":"Points","uid":"points","multiple":true,"schema":[
+           {"display_name":"Point","uid":"point","data_type":"text"}
+         ]},
+         {"data_type":"file","display_name":"Image","uid":"image","field_metadata":{"image":true}}
+       ]},
+       {"title":"Mission","uid":"mission","schema":[
+         {"data_type":"group","display_name":"Beliefs","uid":"beliefs","multiple":true,"schema":[
+           {"display_name":"Item","uid":"item","data_type":"text"}
+         ]},
+         {"data_type":"group","display_name":"Milestones","uid":"milestones","multiple":true,"schema":[
+           {"display_name":"Item","uid":"item","data_type":"text"}
+         ]}
+       ]},
+       {"title":"Leadership","uid":"leadership","schema":[
+         {"data_type":"group","display_name":"Leaders","uid":"leaders","multiple":true,"schema":[
+           {"display_name":"Name","uid":"name","data_type":"text"},
+           {"display_name":"Title","uid":"role","data_type":"text"},
+           {"data_type":"file","display_name":"Photo","uid":"photo","field_metadata":{"image":true}}
+         ]}
+       ]},
+       {"title":"Awards","uid":"awards","schema":[
+         {"data_type":"group","display_name":"Awards","uid":"items","multiple":true,"schema":[
+           {"display_name":"Label","uid":"label","data_type":"text"}
+         ]}
+       ]},
+       {"title":"Values","uid":"values","schema":[
+         {"data_type":"group","display_name":"Values","uid":"items","multiple":true,"schema":[
+           {"display_name":"Title","uid":"title","data_type":"text"},
+           {"display_name":"Description","uid":"description","data_type":"text","field_metadata":{"multiline":true}}
+         ]}
+       ]},
+       {"title":"Careers Teaser","uid":"careers_teaser","schema":[
+         {"data_type":"group","display_name":"Jobs","uid":"jobs","multiple":true,"schema":[
+           {"display_name":"Title","uid":"title","data_type":"text"},
+           {"display_name":"Badge","uid":"badge","data_type":"text"},
+           {"display_name":"Summary","uid":"summary","data_type":"text"},
+           {"display_name":"Apply URL","uid":"apply_url","data_type":"text"}
+         ]}
+       ]},
+       {"title":"Contact Cards","uid":"contact_cards","schema":[
+         {"data_type":"group","display_name":"Cards","uid":"cards","multiple":true,"schema":[
+           {"display_name":"Title","uid":"title","data_type":"text"},
+           {"display_name":"Description","uid":"description","data_type":"text","field_metadata":{"multiline":true}},
+           {"display_name":"URL","uid":"href","data_type":"text"}
+         ]}
+       ]},
+      {"title":"Offices","uid":"offices","schema":[
+        {"display_name":"Title","uid":"title","data_type":"text"},
+        {"display_name":"Subtitle","uid":"subtitle","data_type":"text","field_metadata":{"multiline":true}},
+        {"data_type":"file","display_name":"Images","uid":"images","field_metadata":{"image":true},"multiple":true}
+      ]},
+       {"title":"Testimonials","uid":"testimonials","schema":[
+         {"data_type":"group","display_name":"Quotes","uid":"quotes","multiple":true,"schema":[
+           {"display_name":"Quote","uid":"quote","data_type":"text","field_metadata":{"multiline":true}},
+           {"display_name":"Author","uid":"author","data_type":"text"}
+         ]}
+       ]},
+       {"title":"Bottom CTA","uid":"bottom_cta","schema":[
+         {"display_name":"Title","uid":"title","data_type":"text"},
+         {"data_type":"group","display_name":"CTAs","uid":"ctas","multiple":true,"schema":[
+           {"display_name":"Label","uid":"label","data_type":"text"},
+           {"display_name":"URL","uid":"href","data_type":"text"}
+         ]}
+       ]}
+     ]
+    }
+  ],
+  "options": {"is_page": true, "singleton": true, "title":"title", "sub_title":[], "url_pattern":"/company", "url_prefix":"/"}
+}
+
+

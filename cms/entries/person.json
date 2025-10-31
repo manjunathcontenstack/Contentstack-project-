@@ -1,0 +1,10 @@
+{
+  "content_type": "person",
+  "entries": [
+    {"title": "Jordan Patel", "job_title": "Chief Executive Officer", "company": "Contentstack"},
+    {"title": "Riya Sharma", "job_title": "VP, Product", "company": "Contentstack"},
+    {"title": "Alex Kim", "job_title": "Head of Engineering", "company": "Contentstack"}
+  ]
+}
+
+

@@ -1,0 +1,11 @@
+{
+  "content_type": "marketplace_app",
+  "entries": [
+    {"title": "Gatsby Starter", "url": "gatsby-starter", "summary": "Launch a Gatsby site connected to Contentstack.", "categories": ["static-site"], "pricing": "Free", "install_url": "https://example.com/install", "docs_url": "https://example.com/docs"},
+    {"title": "Next.js Preview", "url": "nextjs-preview", "summary": "Preview headless content with Next.js.", "categories": ["preview"], "pricing": "Free", "install_url": "https://example.com/install", "docs_url": "https://example.com/docs"},
+    {"title": "Algolia Search", "url": "algolia-search", "summary": "On-site search for your content.", "categories": ["search"], "pricing": "Paid", "install_url": "https://example.com/install", "docs_url": "https://example.com/docs"},
+    {"title": "Segment Events", "url": "segment-events", "summary": "Pipe events to Segment for analytics.", "categories": ["analytics"], "pricing": "Free", "install_url": "https://example.com/install", "docs_url": "https://example.com/docs"}
+  ]
+}
+
+

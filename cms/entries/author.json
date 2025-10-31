@@ -1,0 +1,10 @@
+{
+  "content_type": "author",
+  "entries": [
+    {"title": "Jordan Patel", "role": "CEO", "bio": "Leading the team to deliver personalized experiences."},
+    {"title": "Ava Nguyen", "role": "Principal Engineer", "bio": "Building composable foundations at scale."},
+    {"title": "Marco Rossi", "role": "Product Manager", "bio": "Orchestrating value across the platform."}
+  ]
+}
+
+

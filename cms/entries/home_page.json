@@ -1,0 +1,47 @@
+{
+  "content_type": "home_page",
+  "entries": [
+    {
+      "title": "Home",
+      "url": "/",
+      "page_sections": [
+        {"announcement_bar": {"enabled": true, "text": "See what’s new at our Fall Product Update — Live November 6", "link": {"label": "Learn more", "href": "/updates"}}},
+        {"hero": {"headline": "The adaptive experience platform for real‑time personalization at speed and scale", "subheadline": "", "primary_cta": {"label": "Try for free", "href": "/start"}}},
+        {"logo_carousel": {"enable_marquee": true, "brands": []}},
+        {"roles": {"title": "Built for everyone in your organization", "cards": [
+          {"title": "Business users", "description": "Streamline workflows and collaborate with guardrails so teams ship faster.", "link": {"label": "Learn more", "href": "#"}},
+          {"title": "Developers & IT", "description": "Build with your preferred tools and frameworks on an API‑first platform.", "link": {"label": "Learn more", "href": "#"}},
+          {"title": "Digital leaders", "description": "Orchestrate omnichannel experiences and scale with confidence.", "link": {"label": "Learn more", "href": "#"}}
+        ]}},
+        {"success_cards": {"eyebrow": "Customer success", "title": "Measurable success that makes a difference", "cards": [
+          {"value": "80", "unit": "%", "label": "Faster content publishing", "description": "See how global brands accelerate launches.", "link": {"label": "Read the story", "href": "#"}},
+          {"value": "38", "unit": "%", "label": "Conversion rate", "description": "Personalization that impacts revenue.", "link": {"label": "Read the story", "href": "#"}},
+          {"value": "21", "unit": "%", "label": "Fewer workflow steps", "description": "Governance without slowing teams.", "link": {"label": "Read the story", "href": "#"}}
+        ]}},
+        {"metrics": {"metric": [
+          {"value": "2.5x", "label": "Faster launches", "suffix": ""},
+          {"value": "40%", "label": "Lower TCO", "suffix": ""},
+          {"value": "98%", "label": "CSAT", "suffix": ""}
+        ]}},
+        {"analyst_recognition": {"title": "Analyst recognition", "badges": []}},
+        {"quick_links": {"links": [
+          {"label": "Compare plans", "href": "/plans.html"},
+          {"label": "Read the docs", "href": "/docs.html"},
+          {"label": "Explore apps", "href": "/marketplace.html"},
+          {"label": "Talk to us", "href": "/contact.html"}
+        ]}},
+        {"why": {"title": "Why legacy platforms hold you back", "cards": [
+          {"title": "Slow releases", "body": "Monolithic stacks couple content with code, making every change a release."},
+          {"title": "Rigid tooling", "body": "Limited integrations and templates constrain teams and create workarounds."},
+          {"title": "Scaling pains", "body": "Traffic spikes and new channels require costly re‑platforms and ops."}
+        ]}},
+        {"bottom_cta": {"title": "Ready to reimagine possible?", "subtitle": "Learn more about Contentstack Edge, the adaptive experience platform that powers real‑time, omnichannel personalization.", "ctas": [
+          {"label": "Request a demo", "href": "/contact"},
+          {"label": "Start free", "href": "/start"}
+        ]}}
+      ]
+    }
+  ]
+}
+
+

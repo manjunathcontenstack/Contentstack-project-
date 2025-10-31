@@ -1,0 +1,19 @@
+{
+  "title": "Marketplace App",
+  "uid": "marketplace_app",
+  "inbuilt_class": false,
+  "schema": [
+    {"display_name":"Title","uid":"title","data_type":"text","mandatory":true,"unique":true,"field_metadata":{"_default":true,"version":3}},
+    {"display_name":"URL","uid":"url","data_type":"text","mandatory":true,"unique":true},
+    {"display_name":"Summary","uid":"summary","data_type":"text","field_metadata":{"multiline":true}},
+    {"display_name":"Categories","uid":"categories","data_type":"text","multiple":true},
+    {"display_name":"Logo","uid":"logo","data_type":"file","field_metadata":{"image":true}},
+    {"display_name":"Pricing","uid":"pricing","data_type":"text"},
+    {"display_name":"Install URL","uid":"install_url","data_type":"text"},
+    {"display_name":"Docs URL","uid":"docs_url","data_type":"text"}
+  ],
+  "description": "Marketplace apps/extensions",
+  "options": {"is_page": false, "singleton": false, "title":"title", "sub_title":[]}
+}
+
+

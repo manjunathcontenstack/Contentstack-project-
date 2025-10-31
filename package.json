@@ -1,0 +1,40 @@
+{
+  "name": "contentstack-like-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "start": "next start -p 3000",
+    "build": "next build",
+    "dev:express": "node server.js",
+    "start:express": "NODE_ENV=production node server.js",
+    "organize": "node scripts/organize-project.js",
+    "organize:react": "node scripts/move-react.js",
+    "react:dev": "npm --prefix apps/react run dev",
+    "react:build": "npm --prefix apps/react run build",
+    "build:static": "npm run organize && node scripts/build-static.js",
+    "build:spa": "npm run react:build && npm run build",
+    "import:all": "node scripts/import-all.js",
+    "import:from-local": "node scripts/import-from-local.js",
+    "publish:all": "node scripts/publish-all.js",
+    "verify:delivery": "node scripts/verify-delivery.js",
+    "link:docs": "node scripts/link-docs.js",
+    "publish:assets": "node scripts/publish-linked-assets.js",
+    "dump:company": "node scripts/dump-company-delivery.js",
+    "links:pretty": "node scripts/replace-html-links.js"
+  },
+  "dependencies": {
+    "next": "^14.2.10",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "compression": "^1.7.4",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "@contentstack/management": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}
+
+
