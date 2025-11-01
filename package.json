@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "node server.js",
     "start": "NODE_ENV=production node server.js",
-    "organize": "node scripts/organize-project.js",
-    "build": "npm run organize && node scripts/build-static.js",
+    "build": "npm --prefix apps/react install --no-audit --no-fund && npm --prefix apps/react run build",
+    "partners:import": "node scripts/import-partners.js",
     "import:all": "node scripts/import-all.js",
     "import:from-local": "node scripts/import-from-local.js",
     "publish:all": "node scripts/publish-all.js",
